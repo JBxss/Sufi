@@ -1,0 +1,25 @@
+/* Colors: */
+#FFFFFF
+#E6E6E6
+#413E4D
+#ABB9C7
+#707070
+#DD3542
+#F7F7F7
+#8E8E8E
+#96DCFA
+#00000029
+#FAFAFA
+#ABB9C780
+#F1F6FB
+#D1E8FF74
+#E6E6E6CC
+#006192
+#31323F
+#007AB3
+#AAAAAA4D
+#414141
+
+/* Font/text values */
+font-family-open-sans: Open Sans;
+font-family-lato: Lato;

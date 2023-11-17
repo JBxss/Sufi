@@ -1,0 +1,11 @@
+/* Colors: */
+white: #FFFFFF
+grape: #413E4D
+red: #DD3542
+gray (light): #00000029
+azul plomo (light): #ABB9C780
+azul plomo: #ABB9C7
+gray: #707070
+
+/* Font/text values */
+font-family-open-sans: Open Sans;
