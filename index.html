@@ -7,23 +7,34 @@
     <title>Sufi</title>
     <link rel="shortcut icon" href="./assets/login/Grupo 258.svg" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
 
     <div class="wrapper">
-        <img class="login-logo" src="./assets/login/Grupo 258.svg" alt="Logo de Sufi">
-        <h1>Sufipay</h1>
-        <h3>Administrador comercial</h3>
-        <form>
+
+        <div class="animate__animated animate__fadeInDown">
+            <img class="login-logo" src="./assets/login/Grupo 258.svg" alt="Logo de Sufi">
+            <h1>Sufipay</h1>
+            <h3>Administrador comercial</h3>
+        </div>
+
+        <form class="animate__animated animate__fadeInUp">
 
             <div class="input-container">
                 <div class="input-box">
-                    <input class="input-user" type="text" placeholder="Usuario" required>
+                    <input class="input-user" type="text" required>
+                    <label class="lbl-nombre">
+                        <span class="text-nomb">Usuario</span>
+                    </label>
                 </div>
 
                 <div class="input-box">
-                    <input type="password" placeholder="Contraseña" required>
+                    <input type="password" required>
+                    <label class="lbl-pass">
+                        <span class="text-pass">Contraseña</span>
+                    </label>
                 </div>
             </div>
 
@@ -34,12 +45,18 @@
             </div>
         </form>
 
-        <img class="login-bg-1" src="./assets/login/Grupo 32966.svg" alt="Imagen de fondo">
-        <img class="login-bg-2"src="./assets/login/Grupo 32967.svg" alt="Imagen de fondo">
-        <img class="login-dots-1" src="./assets/login/Grupo 36075.svg" alt="Imagen de fondo">
-        <img class="login-dots-2" src="./assets/login/Grupo 36052.svg" alt="Imagen de fondo">
-        <img class="login-dot-1" src="./assets/login/Elipse 197.svg" alt="Imagen de fondo">
-        <img class="login-dot-2" src="./assets/login/Elipse 216.svg" alt="Imagen de fondo">
+        <img class="login-bg-1 animate__animated animate__fadeInRight animate__delay-1s"
+            src="./assets/login/Grupo 32966.svg" alt="Imagen de fondo">
+        <img class="login-bg-2 animate__animated animate__fadeInLeft animate__delay-1s"
+            src="./assets/login/Grupo 32967.svg" alt="Imagen de fondo">
+        <img class="login-dots-1 animate__animated animate__fadeInLeft animate__delay-1s"
+            src="./assets/login/Grupo 36075.svg" alt="Imagen de fondo">
+        <img class="login-dots-2 animate__animated animate__fadeInRight animate__delay-1s"
+            src="./assets/login/Grupo 36052.svg" alt="Imagen de fondo">
+        <img class="login-dot-1 animate__animated animate__fadeInRight animate__delay-1s"
+            src="./assets/login/Elipse 197.svg" alt="Imagen de fondo">
+        <img class="login-dot-2 animate__animated animate__fadeInLeft animate__delay-1s"
+            src="./assets/login/Elipse 216.svg" alt="Imagen de fondo">
     </div>
 
     <script src="script.js"></script>

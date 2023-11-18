@@ -33,7 +33,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
 }
 
 body {
@@ -41,6 +41,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100vw;
   background: #ffffff;
   overflow: hidden;
 }
@@ -88,19 +89,16 @@ body {
   background: var(--white_-ffffff) 0% 0% no-repeat padding-box;
   border: 1px solid var(--azul-plomo-50-);
   border-radius: 6px;
-  padding: 16px;
-}
-
-.input-box .input-user {
-  margin: 0px 0px 12px 0px;
-}
-
-.input-box input::placeholder {
+  padding: 30px 16px 16px 16px;
   font: var(--unnamed-font-style-normal) normal
     var(--unnamed-font-weight-normal) var(--unnamed-font-size-16) /
     var(--unnamed-line-spacing-22) var(--unnamed-font-family-open-sans);
   letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(--azul-plomo);
+  color: var(---413e4d-input-color);
+}
+
+.input-box .input-user {
+  margin: 0px 0px 12px 0px;
 }
 
 .wrapper .input-btn {
@@ -131,37 +129,74 @@ body {
 
 .login-bg-1 {
   position: absolute;
-  top: -138px;
-  left: 852px;
+  top: -8.125rem;
+  left: 53.25rem;
+  overflow: hidden;
 }
 
 .login-bg-2 {
   position: absolute;
-  top: 400px;
-  left: -147px;
+  top: 25rem;
+  left: -9.188rem;
   z-index: -1;
 }
 
 .login-dot-1 {
   position: absolute;
-  top: 368px;
-  left: 284px;
+  top: 23rem;
+  left: 17.75rem;
 }
 
 .login-dot-2 {
   position: absolute;
-  top: 556px;
-  left: 956px;
+  top: 34.75rem;
+  left: 59.75rem;
 }
 
 .login-dots-1 {
   position: absolute;
-  top: 616px;
-  left: 887px;
+  top: 38.5rem;
+  left: 55.438rem;
 }
 
 .login-dots-2 {
   position: absolute;
-  top: 256px;
-  left: 332px;
+  top: 16rem;
+  left: 20.75rem;
+}
+
+.input-box .lbl-nombre {
+  position: absolute;
+  top: 2.188rem;
+  left: 2.188rem;
+  pointer-events: none;
+}
+
+.input-box .lbl-pass {
+  position: absolute;
+  top: 6.25rem;
+  left: 2.188rem;
+  pointer-events: none;
+}
+
+.text-nomb,
+.text-pass {
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-normal) var(--unnamed-font-size-16) /
+    var(--unnamed-line-spacing-22) var(--unnamed-font-family-open-sans);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--azul-plomo);
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.input-box input:focus + .lbl-nombre .text-nomb,
+.input-box input:valid + .lbl-nombre .text-nomb,
+.input-box input:focus + .lbl-pass .text-pass,
+.input-box input:valid + .lbl-pass .text-pass {
+  transform: translateY(-60%);
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-normal) 12px / var(--unnamed-line-spacing-22)
+    var(--unnamed-font-family-open-sans);
+  letter-spacing: var(--unnamed-character-spacing-0);
 }
