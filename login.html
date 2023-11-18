@@ -11,25 +11,33 @@
 
 <body>
 
-    <div class="login-box">
-        <img src="./assets/login/Grupo 258.svg" alt="Logo de Sufi">
+    <div class="wrapper">
+        <img class="login-logo" src="./assets/login/Grupo 258.svg" alt="Logo de Sufi">
         <h1>Sufipay</h1>
         <h3>Administrador comercial</h3>
         <form>
 
-            <div class="login-input-box">
-                <!-- USERNAME -->
-                <input type="text" placeholder="Usuario">
+            <div class="input-container">
+                <div class="input-box">
+                    <input class="input-user" type="text" placeholder="Usuario" required>
+                </div>
 
-                <!-- PASSWORD -->
-                <input type="password" placeholder="Contraseña">
+                <div class="input-box">
+                    <input type="password" placeholder="Contraseña" required>
+                </div>
             </div>
 
-            <input type="submit" value="INGRESAR">
+            <input class="input-btn" type="submit" value="INGRESAR">
 
-            <a href="#">No recuerdo mi contraseña</a>
+            <div>
+                <a class="login-forgot-btn" ref="#">No recuerdo mi contraseña</a>
+            </div>
+            
+
+
         </form>
     </div>
+
     <script src="script.js"></script>
 </body>
 
