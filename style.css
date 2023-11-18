@@ -40,8 +40,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
   background: #ffffff;
+  overflow: hidden;
 }
 
 .wrapper {
@@ -126,4 +127,41 @@ body {
   color: var(---413e4d-input-color);
   text-align: center;
   text-decoration: underline;
+}
+
+.login-bg-1 {
+  position: absolute;
+  top: -138px;
+  left: 852px;
+}
+
+.login-bg-2 {
+  position: absolute;
+  top: 400px;
+  left: -147px;
+  z-index: -1;
+}
+
+.login-dot-1 {
+  position: absolute;
+  top: 368px;
+  left: 284px;
+}
+
+.login-dot-2 {
+  position: absolute;
+  top: 556px;
+  left: 956px;
+}
+
+.login-dots-1 {
+  position: absolute;
+  top: 616px;
+  left: 887px;
+}
+
+.login-dots-2 {
+  position: absolute;
+  top: 256px;
+  left: 332px;
 }
