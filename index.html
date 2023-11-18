@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sufi</title>
     <link rel="shortcut icon" href="./assets/login/Grupo 258.svg" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 </head>
 
 <body>
 
-    <div class="wrapper">
+    <main class="wrapper">
 
         <div class="animate__animated animate__fadeInDown animate__fast">
             <img class="login-logo" src="./assets/login/Grupo 258.svg" alt="Logo de Sufi">
@@ -20,21 +20,19 @@
             <h3>Administrador comercial</h3>
         </div>
 
-        <form class="animate__animated animate__fadeInUp animate__fast">
+        <form id="form" class="animate__animated animate__fadeInUp animate__fast" action="./table.html">
 
             <div class="input-container">
                 <div class="input-box">
-                    <input class="input-user" type="text" required>
-                    <label class="lbl-nombre">
-                        <span class="text-nomb">Usuario</span>
-                    </label>
+                    <input id="username" name="username" class="input-user" type="text" required>
+                    <label for="username" class="lbl-nombre">Usuario</label>
+                    <div class="error"></div>
                 </div>
 
                 <div class="input-box">
-                    <input type="password" required>
-                    <label class="lbl-pass">
-                        <span class="text-pass">Contraseña</span>
-                    </label>
+                    <input id="password" name="password" type="password" required>
+                    <label for="password" class="lbl-pass">Contraseña</label>
+                    <div class="error"></div>
                 </div>
             </div>
 
@@ -60,9 +58,9 @@
                 src="./assets/login/Elipse 216.svg" alt="Imagen de fondo">
         </div>
 
-    </div>
+    </main>
 
-    <script src="script.js"></script>
+    <script src="./js/login.js"></script>
 </body>
 
 </html>
