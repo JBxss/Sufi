@@ -127,42 +127,45 @@ body {
   text-decoration: underline;
 }
 
-.login-bg-1 {
-  position: absolute;
-  top: -8.125rem;
-  left: 53.25rem;
+.images {
+  display: flex;
+  position: fixed;
   overflow: hidden;
 }
 
-.login-bg-2 {
-  position: absolute;
-  top: 25rem;
-  left: -9.188rem;
+.login-bg-right {
+  top: -17.87vh;
+  left: 69.7vw;
+  background-position: top right;
+  overflow: hidden;
+}
+
+.login-bg-left {
+  top: 51.08vh;
+  left: -12.45vw;
+  background-position: bottom left;
   z-index: -1;
+  overflow: hidden;
 }
 
-.login-dot-1 {
-  position: absolute;
-  top: 23rem;
-  left: 17.75rem;
+.login-dot-left {
+  top: 47.66vh;
+  left: 22.06vw;
 }
 
-.login-dot-2 {
-  position: absolute;
-  top: 34.75rem;
-  left: 59.75rem;
+.login-dot-right {
+  top: 72.22vh;
+  left: 78.12vw;
 }
 
-.login-dots-1 {
-  position: absolute;
-  top: 38.5rem;
-  left: 55.438rem;
+.login-dots-left {
+  top: 33.16vh;
+  left: 25.13vw;
 }
 
-.login-dots-2 {
-  position: absolute;
-  top: 16rem;
-  left: 20.75rem;
+.login-dots-right {
+  top: 79.79vh;
+  left: 72vw;
 }
 
 .input-box .lbl-nombre {
