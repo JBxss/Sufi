@@ -146,7 +146,7 @@ form {
   border: 1px solid var(--azul-plomo-50-);
   border-radius: 6px;
   margin: 16px 0px;
-  padding: 18px 16px;
+  padding: 18px 16px 0px 16px;
   font: var(--unnamed-font-style-normal) normal
     var(--unnamed-font-weight-normal) var(--unnamed-font-size-16) /
     var(--unnamed-line-spacing-22) var(--unnamed-font-family-open-sans);
@@ -169,7 +169,7 @@ form {
     var(--unnamed-font-weight-normal) var(--unnamed-font-size-16) /
     var(--unnamed-line-spacing-22) var(--unnamed-font-family-open-sans);
   letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(--azul-plomo);
+  color: var(---413e4d-input-color);
   text-align: left;
   appearance: none;
 }
@@ -218,4 +218,51 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   left: 228px;
   color: var(--red_1_-dd3542);
   font-size: 24px;
+}
+
+.lbl {
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-normal) var(--unnamed-font-size-16) /
+    var(--unnamed-line-spacing-22) var(--unnamed-font-family-open-sans);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--azul-plomo);
+  position: absolute;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.lbl-number {
+  top: 194px;
+  left: 535px;
+}
+
+.lbl-doc {
+  top: 194px;
+  left: 300px;
+}
+
+.lbl-date-left {
+    top: 194px;
+    left: 771px;
+  }
+
+  .lbl-date-right {
+    top: 194px;
+    left: 1006px;
+  }
+
+  .lbl-select {
+    top: 194px;
+    left: 88px;
+  }
+
+.lbl-focus {
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-normal) 12px / var(--unnamed-line-spacing-22)
+    var(--unnamed-font-family-open-sans);
+  transform: translateY(-60%);
+}
+
+#clearButton {
+    display: none;
 }

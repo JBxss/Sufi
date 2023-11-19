@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/table.css">
     <link rel='stylesheet'
         href='https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-        <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
 </head>
 
 <body>
@@ -34,26 +34,33 @@
         <form id="filtroForm">
             <img class="calendar-icon calendar-icon-left" src="./assets/table/calendar-days.svg" alt="">
             <img class="calendar-icon calendar-icon-right" src="./assets/table/calendar-days.svg" alt="">
-            <i class="cross-icon fi fi-br-cross"></i>
+            <a id="clearButton" onclick="clearForm()" ><i class="cross-icon fi fi-br-cross"></i></a>
             <i class="select-icon fi fi-rr-angle-small-down"></i>
-            <select class="filter filter-select" id="filtroEdad" name="filtroEdad" onchange="aplicarFiltroPorFecha(event)" placeholder="Tipo">
-                <option hidden selected value="">Tipo doc.</option>
+
+            <select class="filter filter-select" id="filtroTipo" name="filtroEdad"
+                onchange="toggleButton(); aplicarFiltroPorFecha(event);">
+                <option hidden selected value=""></option>
                 <option value="">Todos</option>
                 <option value="25">Cédula</option>
-                <option value="25">Tarjeta de Identidad</option>
+                <option value="25">T.I</option>
             </select>
+            <label id="lbl-select" class="lbl lbl-select">Tipo doc</label>
 
-            <input class="filter filter-doc" type="text" id="filtroNombre" name="filtroNombre" oninput="aplicarFiltroPorFecha(event)"
-                placeholder="Número de documento">
+                <input class="filter filter-doc" type="number" id="filtroDoc"
+                    oninput="toggleButton(); aplicarFiltroPorFecha(event);">
+                <label id="lbl-doc" class="lbl lbl-doc">Número de documento</label>
 
-            <input class="filter filter-number" type="text" id="filtroNombre" name="filtroNombre" oninput="aplicarFiltroPorFecha(event)"
-                placeholder="Número de desembolso">
+            <input class="filter filter-number" type="number" id="filtroNumber" name="filtroNombre"
+                oninput="toggleButton(); aplicarFiltroPorFecha(event);">
+                <label id="lbl-number" class="lbl lbl-number">Número de desembolso</label>
 
-            <input class="filter filter-date-left" type="date" id="filtroFechaDesde" name="filtroFechaDesde" oninput="aplicarFiltroPorFecha(event)"
-                placeholder="Desde">
+            <input class="filter filter-date-left" type="date" id="filtroFechaDesde" name="filtroFechaDesde"
+                oninput="toggleButton(); aplicarFiltroPorFecha(event);" >
+                <label id="lbl-date-left" class="lbl lbl-date-left">Desde</label>
 
-            <input class="filter filter-date-right" type="date" id="filtroFechaHasta" name="filtroFechaHasta" oninput="aplicarFiltroPorFecha(event)"
-                placeholder="Hasta">
+            <input class="filter filter-date-right" type="date" id="filtroFechaHasta" name="filtroFechaHasta"
+                oninput="toggleButton(); aplicarFiltroPorFecha(event);">
+                <label id="lbl-date-right" class="lbl lbl-date-right">Hasta</label>
         </form>
     </section>
 
