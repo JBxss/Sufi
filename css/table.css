@@ -98,10 +98,10 @@ nav {
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    height: 88px;
-    padding: 0px 72px;
+  display: flex;
+  justify-content: space-between;
+  height: 88px;
+  padding: 0px 72px;
 }
 
 .table-title {
@@ -125,5 +125,97 @@ header {
 }
 
 .header-btn-container {
-    margin-top: 32px;
+  margin-top: 32px;
+}
+
+.filters {
+  height: 88px;
+  background: #fafafa 0% 0% no-repeat padding-box;
+  opacity: 1;
+  padding: 0px 72px;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter {
+  width: 272px;
+  background: var(--white_-ffffff) 0% 0% no-repeat padding-box;
+  border: 1px solid var(--azul-plomo-50-);
+  border-radius: 6px;
+  margin: 16px 0px;
+  padding: 18px 16px;
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-normal) var(--unnamed-font-size-16) /
+    var(--unnamed-line-spacing-22) var(--unnamed-font-family-open-sans);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(---413e4d-input-color);
+}
+
+.filter::placeholder {
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-normal) var(--unnamed-font-size-16) /
+    var(--unnamed-line-spacing-22) var(--unnamed-font-family-open-sans);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--azul-plomo);
+  text-align: left;
+}
+
+.filter-select {
+  height: 58px;
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-normal) var(--unnamed-font-size-16) /
+    var(--unnamed-line-spacing-22) var(--unnamed-font-family-open-sans);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--azul-plomo);
+  text-align: left;
+  appearance: none;
+}
+
+.filter-select,
+.filter-doc,
+.filter-number,
+.filter-date-left {
+  margin-right: 16px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.calendar-icon {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+}
+
+.calendar-icon-left {
+  top: 192px;
+  left: 936px;
+}
+
+.calendar-icon-right {
+  top: 192px;
+  left: 1168px;
+}
+
+.cross-icon {
+  position: absolute;
+  color: var(--white_-ffffff);
+  font-size: 6px;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: var(--red_1_-dd3542);
+  top: 192px;
+  left: 28px;
+}
+
+.select-icon {
+  position: absolute;
+  top: 192px;
+  left: 228px;
+  color: var(--red_1_-dd3542);
+  font-size: 24px;
 }
