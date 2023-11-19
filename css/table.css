@@ -50,10 +50,11 @@ body {
 nav {
   background: var(--white_-ffffff) 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 16px #d1e8ff74;
-  padding: 15px 20px;
   display: flex;
+  padding: 0px 24px;
   justify-content: space-between;
   align-items: center;
+  height: 72px;
 }
 
 .logo {
@@ -66,20 +67,63 @@ nav {
   height: auto;
 }
 
-.login-btn {
+.btn {
+  text-decoration: none;
+}
+
+.btn i,
+.btn img {
+  vertical-align: middle;
+}
+
+.logout-btn {
   background-color: transparent;
   font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold)
     var(--unnamed-font-size-14) / var(--unnamed-line-spacing-19)
     var(--unnamed-font-family-open-sans);
   letter-spacing: var(--unnamed-character-spacing-0);
   color: #31323f;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
   cursor: pointer;
-  margin-bottom: 6px;
 }
 
 .logout-icon {
-    font-size: 20px;
+  font-size: 24px;
+  margin-left: 12px;
+}
+
+.download-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 25px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 88px;
+    padding: 0px 72px;
+}
+
+.table-title {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold)
+    20px / var(--unnamed-line-spacing-27) var(--unnamed-font-family-open-sans);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(---413e4d-input-color);
+  margin: 32px 0px;
+}
+
+.download-btn {
+  background: var(--red_1_-dd3542) 0% 0% no-repeat padding-box;
+  border-radius: 24px;
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold)
+    var(--unnamed-font-size-14) / var(--unnamed-line-spacing-19)
+    var(--unnamed-font-family-open-sans);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--white_-ffffff);
+  text-align: center;
+  padding: 14px 50px 14px 14px;
+}
+
+.header-btn-container {
+    margin-top: 32px;
 }
