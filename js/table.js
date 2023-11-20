@@ -121,7 +121,7 @@ function clearForm() {
 }
 
 var datos = [
-  { fecha: '2023-11-01 02:43:24', numeroDesembolso: 19384774, TipoDocumento: 'Cedula', NumeroDocumento: 1938477488, Monto: '$237.283.738' },
+{ fecha: '2023-11-01 02:43:24', numeroDesembolso: 19384774, TipoDocumento: 'Cedula', NumeroDocumento: 1938477488, Monto: '$237.283.738' },
 { fecha: '2023-11-01 02:43:24', numeroDesembolso: 19384774, TipoDocumento: 'Cedula', NumeroDocumento: 1938477499, Monto: '$557.283.738' },
 { fecha: '2023-11-02 05:12:10', numeroDesembolso: 84736281, TipoDocumento: 'Pasaporte', NumeroDocumento: 1938477400, Monto: '$777.283.738' },
 { fecha: '2023-11-03 08:30:45', numeroDesembolso: 56782309, TipoDocumento: 'Licencia', NumeroDocumento: 1938477466, Monto: '$337.283.738' },
@@ -139,7 +139,7 @@ var datos = [
 { fecha: '2023-11-04 12:15:30', numeroDesembolso: 98765432, TipoDocumento: 'Cedula', NumeroDocumento: 1938477422, Monto: '$217.283.738' }
 ];
 
-var registrosPorPagina = 16;
+var registrosPorPagina = 6;
 var paginaActual = 1;
 
 function mostrarTabla(pagina) {

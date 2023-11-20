@@ -75,6 +75,21 @@
         </tr>
     </table>
 
+    <footer>
+        <label for="inputPagina">Página:</label>
+        <input type="number" id="inputPagina" min="1" value="1" onchange="cambiarPagina()">
+        <span id="totalPaginas"></span>
+
+        <div class="pagination" id="paginacion"></div>
+
+        <label for="registrosPorPagina">Registros por Página:</label>
+        <select id="registrosPorPagina" name="registrosPorPagina" onchange="cambiarRegistrosPorPagina()">
+            <option value="3">3</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+        </select>
+    </footer>
+
     <script src="./js/table.js"></script>
 
 </body>
