@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sufi</title>
+    <link rel="shortcut icon" href="./assets/table/Grupo 175.svg" type="image/x-icon">
     <link rel="stylesheet" href="./css/table.css">
     <link rel='stylesheet'
         href='https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
@@ -12,57 +13,59 @@
 </head>
 
 <body>
+    <main>
+        <nav>
+            <div class="logo">
+                <img src="./assets/table/Grupo 175.svg" alt="Logo">
+            </div>
+            <a class="btn logout-btn" href="./index.html">Cerrar sesión <i
+                    class="logout-icon fi fi-rr-arrow-right-to-bracket"></i></a>
+        </nav>
 
-    <nav>
-        <div class="logo">
-            <img src="./assets/table/Grupo 175.svg" alt="Logo">
-        </div>
-        <a class="btn logout-btn" href="./index.html">Cerrar sesión <i
-                class="logout-icon fi fi-rr-arrow-right-to-bracket"></i></a>
-    </nav>
-
-    <header>
-        <h2 class="table-title">Mis desembolsos</h2>
-        <div class="header-btn-container">
-            <a class="btn download-btn" href=""><img class="download-icon" src="./assets/table/download.svg"
-                    alt="">Descargar</a>
-        </div>
-    </header>
+        <header>
+            <h2 class="table-title">Mis desembolsos</h2>
+            <div class="header-btn-container">
+                <a class="btn download-btn" href=""><img class="download-icon" src="./assets/table/download.svg"
+                        alt="">Descargar</a>
+            </div>
+        </header>
 
 
-    <section class="filters">
-        <form id="filtroForm">
-            <img class="calendar-icon calendar-icon-left" src="./assets/table/calendar-days.svg" alt="">
-            <img class="calendar-icon calendar-icon-right" src="./assets/table/calendar-days.svg" alt="">
-            <a id="clearButton" onclick="clearForm()"><i class="cross-icon fa-solid fa-xmark"></i></a>
-            <i class="select-icon fi fi-rr-angle-small-down"></i>
+        <section class="filters">
+            <form id="filtroForm">
+                <img class="calendar-icon calendar-icon-left" src="./assets/table/calendar-days.svg" alt="">
+                <img class="calendar-icon calendar-icon-right" src="./assets/table/calendar-days.svg" alt="">
+                <a id="clearButton" onclick="clearForm()"><i class="cross-icon fa-solid fa-xmark"></i></a>
+                <i class="select-icon fi fi-rr-angle-small-down"></i>
 
-            <select class="filter filter-select" id="filtroTipo" name="filtroEdad"
-                onchange="toggleButton(); aplicarFiltroPorFecha(event);">
-                <option hidden selected value=""></option>
-                <option value="Cédula">Cédula</option>
-                <option value="Licencia">Licencia</option>
-                <option value="Pasaporte">Pasaporte</option>
-            </select>
-            <label id="lbl-select" class="lbl lbl-select">Tipo doc.</label>
+                <select class="filter filter-select" id="filtroTipo" name="filtroEdad"
+                    onchange="toggleButton(); aplicarFiltroPorFecha(event);">
+                    <option hidden selected value=""></option>
+                    <option value="Cédula">Cédula</option>
+                    <option value="Licencia">Licencia</option>
+                    <option value="Pasaporte">Pasaporte</option>
+                </select>
+                <label id="lbl-select" class="lbl lbl-select">Tipo doc.</label>
 
-            <input class="filter filter-doc" type="number" id="filtroDoc"
-                oninput="toggleButton(); aplicarFiltroPorFecha(event);">
-            <label id="lbl-doc" class="lbl lbl-doc">Número de documento</label>
+                <input class="filter filter-doc" type="number" id="filtroDoc"
+                    oninput="toggleButton(); aplicarFiltroPorFecha(event);">
+                <label id="lbl-doc" class="lbl lbl-doc">Número de documento</label>
 
-            <input class="filter filter-number" type="number" id="filtroNumber" name="filtroNombre"
-                oninput="toggleButton(); aplicarFiltroPorFecha(event);">
-            <label id="lbl-number" class="lbl lbl-number">Número de desembolso</label>
+                <input class="filter filter-number" type="number" id="filtroNumber" name="filtroNombre"
+                    oninput="toggleButton(); aplicarFiltroPorFecha(event);">
+                <label id="lbl-number" class="lbl lbl-number">Número de desembolso</label>
 
-            <input class="filter filter-date-left" type="date" id="filtroFechaDesde" name="filtroFechaDesde"
-                oninput="toggleButton(); aplicarFiltroPorFecha(event);">
-            <label id="lbl-date-left" class="lbl lbl-date-left">Desde</label>
+                <input class="filter filter-date-left" type="date" id="filtroFechaDesde" name="filtroFechaDesde"
+                    oninput="toggleButton(); aplicarFiltroPorFecha(event);">
+                <label id="lbl-date-left" class="lbl lbl-date-left">Desde</label>
 
-            <input class="filter filter-date-right" type="date" id="filtroFechaHasta" name="filtroFechaHasta"
-                oninput="toggleButton(); aplicarFiltroPorFecha(event);">
-            <label id="lbl-date-right" class="lbl lbl-date-right">Hasta</label>
-        </form>
-    </section>
+                <input class="filter filter-date-right" type="date" id="filtroFechaHasta" name="filtroFechaHasta"
+                    oninput="toggleButton(); aplicarFiltroPorFecha(event);">
+                <label id="lbl-date-right" class="lbl lbl-date-right">Hasta</label>
+            </form>
+        </section>
+    </main>
+
 
     <table id="tablaDesembolsos">
         <tr>

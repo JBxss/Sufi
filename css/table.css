@@ -58,6 +58,13 @@ nav {
   justify-content: space-between;
   align-items: center;
   height: 72px;
+  z-index: 2;
+  position: relative;
+}
+
+main {
+  position: sticky;
+  top: 0;
 }
 
 .logo {
@@ -105,6 +112,9 @@ header {
   justify-content: space-between;
   height: 88px;
   padding: 0px 72px;
+  position: relative;
+  z-index: 1;
+  background-color: var(--white_-ffffff);
 }
 
 .table-title {
@@ -195,13 +205,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .calendar-icon-left {
-  top: 192px;
-  left: 936px;
+  top: 24.52vh;
+  left: 73vw;
 }
 
 .calendar-icon-right {
-  top: 192px;
-  left: 1168px;
+  top: 24.52vh;
+  left: 91.31vw;
 }
 
 .cross-icon {
@@ -211,15 +221,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   padding: 6px 7.5px;
   border-radius: 50%;
   background-color: var(--red_1_-dd3542);
-  top: 192px;
-  left: 28px;
+  top: 24.52vh;
+  left: 1.94vw;
   transition: all 0.3s ease;
 }
 
 .select-icon {
   position: absolute;
-  top: 192px;
-  left: 228px;
+  top: 24.52vh;
+  left: 17.83vw;
   color: var(--red_1_-dd3542);
   font-size: 24px;
 }
@@ -234,28 +244,28 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .lbl-number {
-  top: 194px;
-  left: 535px;
+  top: 24.77vh;
+  left: 41.8vw;
 }
 
 .lbl-doc {
-  top: 194px;
-  left: 300px;
+  top: 24.77vh;
+  left: 23.6vw;
 }
 
 .lbl-date-left {
-  top: 194px;
-  left: 771px;
+  top: 24.77vh;
+  left: 60.2vw;
 }
 
 .lbl-date-right {
-  top: 194px;
-  left: 1006px;
+  top: 24.77vh;
+  left: 78.55vw;
 }
 
 .lbl-select {
-  top: 194px;
-  left: 88px;
+  top: 24.77vh;
+  left: 7vw;
 }
 
 .lbl-focus {
@@ -272,7 +282,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 20px;
+}
+
+tbody {
+  overflow-y: scroll;
 }
 
 th,
@@ -288,6 +301,8 @@ th {
     var(--unnamed-font-size-14) / 15px var(--unnamed-font-family-open-sans);
   letter-spacing: var(--unnamed-character-spacing-0);
   color: var(---413e4d-input-color);
+  position: sticky;
+  top: 248px;
 }
 
 td {
@@ -351,6 +366,7 @@ footer .inputPagina {
   border: 1px solid var(--azul-plomo-50-);
   border-radius: 6px;
   text-align: center;
+  justify-content: center;
   font: var(--unnamed-font-style-normal) normal
     var(--unnamed-font-weight-normal) var(--unnamed-font-size-16) / 20px
     var(--unnamed-font-family-lato);
@@ -387,7 +403,7 @@ footer .inputPagina {
 
 .select-icon-pagination {
   position: absolute;
-  bottom: 20px;
+  bottom: 2.5vh;
   left: 460px;
   color: var(--red_1_-dd3542);
   font-size: 24px;
@@ -411,9 +427,9 @@ footer .inputPagina {
   padding: 20px;
   z-index: 2;
   position: fixed;
-  left: 1090px;
+  left: 84.5vw;
   transform: translateX(-50%);
-  top: 668px;
+  top: 81.3vh;
   box-shadow: 0px 3px 10px #e6e6e6;
   border-radius: 14px;
 }
