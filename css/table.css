@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@400;700&display=swap");
 
 :root {
   /* Colors: */
@@ -206,8 +207,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .cross-icon {
   position: absolute;
   color: var(--white_-ffffff);
-  font-size: 6px;
-  padding: 8px;
+  font-size: 12px;
+  padding: 6px 7.5px;
   border-radius: 50%;
   background-color: var(--red_1_-dd3542);
   top: 192px;
@@ -310,6 +311,90 @@ td:nth-child(5) {
   padding-right: 72px;
 }
 
-td:nth-child(1), th:nth-child(1) {
+td:nth-child(1),
+th:nth-child(1) {
   padding-left: 72px;
+}
+
+footer {
+  background: var(--white_-ffffff) 0% 0% no-repeat padding-box;
+  width: max-content;
+  display: flex;
+  padding: 12px;
+  z-index: 2;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0.01rem;
+  gap: 1rem;
+  box-shadow: 0px 3px 16px #aaaaaa4d;
+  border-radius: 24px 24px 0px 0px;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--red_1_-dd3542);
+  font-size: 24px;
+  margin: 0px 16px;
+}
+.pagination span {
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-normal) var(--unnamed-font-size-16) / 20px
+    var(--unnamed-font-family-lato);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: #414141;
+  vertical-align: middle;
+}
+footer .inputPagina {
+  width: 48px;
+  height: 48px;
+  background: var(--white_-ffffff) 0% 0% no-repeat padding-box;
+  border: 1px solid var(--azul-plomo-50-);
+  border-radius: 6px;
+  text-align: center;
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-normal) var(--unnamed-font-size-16) / 20px
+    var(--unnamed-font-family-lato);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: #414141;
+}
+
+.registrosPorPagina {
+  position: absolute;
+  bottom: 45px;
+  left: 248px;
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-normal) 12px/15px var(--unnamed-font-family-lato);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--azul-plomo);
+  white-space: nowrap;
+}
+
+.inputRegistrosPorPagina {
+  background: var(--white_-ffffff) 0% 0% no-repeat padding-box;
+  border: 1px solid var(--azul-plomo-50-);
+  border-radius: 6px;
+  appearance: none;
+  width: 268px;
+  height: 56px;
+  text-align: left;
+  padding: 28px 52px 8px 16px;
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-normal) var(--unnamed-font-size-16) / 20px
+    var(--unnamed-font-family-lato);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: #414141;
+}
+
+.select-icon-pagination {
+  position: absolute;
+  bottom: 20px;
+  left: 460px;
+  color: var(--red_1_-dd3542);
+  font-size: 24px;
+}
+
+.arrow-pag {
+  font-size: 16px;
+  margin-top: 16px;
 }

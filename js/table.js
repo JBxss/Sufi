@@ -250,7 +250,7 @@ var datos = [
   },
 ];
 
-var registrosPorPagina = 10;
+var registrosPorPagina = 16;
 var paginaActual = 1;
 
 function mostrarTabla(pagina) {
@@ -295,14 +295,14 @@ function actualizarPaginacion(pagina) {
   var paginacion = document.getElementById("paginacion");
   var totalPaginasElement = document.getElementById("totalPaginas");
 
-  totalPaginasElement.textContent = " de " + totalPaginas;
+  totalPaginasElement.textContent = " de " + totalPaginas + "  ";
 
   paginacion.innerHTML = "";
 
   // Botón Anterior
   var btnAnterior = document.createElement("a");
   btnAnterior.href = "javascript:void(0);";
-  btnAnterior.innerHTML = "&lt;";
+  btnAnterior.innerHTML = "<i class='arrow-pag fa-solid fa-chevron-left'></i>";
   btnAnterior.addEventListener("click", function () {
     if (pagina > 1) {
       paginaActual = pagina - 1;
@@ -311,37 +311,18 @@ function actualizarPaginacion(pagina) {
   });
   paginacion.appendChild(btnAnterior);
 
-  // Páginas
-  for (var i = 1; i <= totalPaginas; i++) {
-    (function (pageNumber) {
-      var enlace = document.createElement("a");
-      enlace.href = "javascript:void(0);";
-      enlace.innerHTML = pageNumber;
-
-      if (pageNumber === pagina) {
-        enlace.classList.add("active");
-      } else {
-        enlace.addEventListener("click", function () {
-          paginaActual = pageNumber;
-          mostrarTabla(paginaActual);
-        });
-      }
-
-      paginacion.appendChild(enlace);
-    })(i);
-  }
 
   // Botón Siguiente
   var btnSiguiente = document.createElement("a");
   btnSiguiente.href = "javascript:void(0);";
-  btnSiguiente.innerHTML = "&gt;";
+  btnSiguiente.innerHTML = "<i class='arrow-pag fa-solid fa-chevron-right'></i>";
   btnSiguiente.addEventListener("click", function () {
     if (pagina < totalPaginas) {
       paginaActual = pagina + 1;
       mostrarTabla(paginaActual);
     }
   });
-  paginacion.appendChild(btnSiguiente);
+  totalPaginasElement.appendChild(btnSiguiente);
 }
 
 var datosOriginales = datos.slice(); // Copia de seguridad de los datos originales

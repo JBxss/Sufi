@@ -34,7 +34,7 @@
         <form id="filtroForm">
             <img class="calendar-icon calendar-icon-left" src="./assets/table/calendar-days.svg" alt="">
             <img class="calendar-icon calendar-icon-right" src="./assets/table/calendar-days.svg" alt="">
-            <a id="clearButton" onclick="clearForm()"><i class="cross-icon fi fi-br-cross"></i></a>
+            <a id="clearButton" onclick="clearForm()"><i class="cross-icon fa-solid fa-xmark"></i></a>
             <i class="select-icon fi fi-rr-angle-small-down"></i>
 
             <select class="filter filter-select" id="filtroTipo" name="filtroEdad"
@@ -75,22 +75,23 @@
     </table>
 
     <footer>
-        <label for="inputPagina">Página:</label>
-        <input type="number" id="inputPagina" min="1" value="1" onchange="cambiarPagina()">
-        <span id="totalPaginas"></span>
-
         <div class="pagination" id="paginacion"></div>
+        <input class="inputPagina" type="number" id="inputPagina" min="1" value="1" onchange="cambiarPagina()">
+        <span id="totalPaginas"></span>
+        </div>
 
-        <label for="registrosPorPagina">Registros por Página:</label>
-        <select id="registrosPorPagina" name="registrosPorPagina" onchange="cambiarRegistrosPorPagina()">
-            <option value="3">3</option>
-            <option value="5">5</option>
-            <option selected value="10">10</option>
+        <label class="registrosPorPagina" for="registrosPorPagina">Registros por Página</label>
+        <select class="inputRegistrosPorPagina" id="registrosPorPagina" name="registrosPorPagina"
+            onchange="cambiarRegistrosPorPagina()">
+            <option selected value="16">16</option>
+            <option value="32">32</option>
+            <option value="50">50</option>
         </select>
+        <i class="select-icon-pagination fi fi-rr-angle-small-down"></i>
     </footer>
 
     <script src="./js/table.js"></script>
-
+    <script src="https://kit.fontawesome.com/68c7342c84.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
