@@ -304,4 +304,57 @@ function cambiarPagina() {
   }
 }
 
+document.getElementById('guardarDatos').addEventListener('click', function(event) {
+  event.preventDefault();
+
+  // Obtén la referencia a la tabla
+  var tabla = document.getElementById('tablaDesembolsos');
+
+  // Obtén todas las filas de la tabla
+  var filas = tabla.getElementsByTagName('tr');
+
+  // Inicializa un array para almacenar los datos
+  var datos = [];
+
+  // Itera sobre las filas (comenzando desde 1 para omitir la fila de encabezados)
+  for (var i = 1; i < filas.length; i++) {
+    var fila = filas[i];
+    var celdas = fila.getElementsByTagName('td');
+
+    // Inicializa un array para almacenar los datos de la fila actual
+    var filaDatos = [];
+
+    // Itera sobre las celdas y guarda los datos en el array
+    for (var j = 0; j < celdas.length; j++) {
+      var valorCelda = celdas[j].textContent;
+      filaDatos.push(valorCelda);
+    }
+
+    // Agrega el array de datos al array principal
+    datos.push(filaDatos);
+  }
+
+  // Convierte los datos a formato CSV
+  var csv = '';
+  datos.forEach(function(fila) {
+    csv += fila.join(',') + '\n';
+  });
+
+  // Crea un objeto Blob con los datos CSV
+  var blob = new Blob([csv], { type: 'text/csv' });
+
+  // Crea un enlace temporal y simula un clic en él
+  var enlace = document.createElement('a');
+  enlace.href = window.URL.createObjectURL(blob);
+  enlace.download = 'datos.csv';
+  enlace.style.display = 'none';
+
+  // Añade el enlace al DOM y haz clic para descargar el archivo
+  document.body.appendChild(enlace);
+  enlace.click();
+
+  // Limpia el enlace del DOM
+  document.body.removeChild(enlace);
+});
+
 mostrarTabla(paginaActual);
