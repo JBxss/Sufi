@@ -64,7 +64,7 @@
         </form>
     </section>
 
-    <table id="miTabla">
+    <table id="tablaDesembolsos">
         <tr>
             <th>Fecha y hora</th>
             <th>Número de desembolso</th>
@@ -73,6 +73,11 @@
             <th>Monto</th>
         </tr>
     </table>
+
+    <div id="table-toast" class="table-toast">
+        <p>Pedro Pérez ha hecho <br> una compra por valor de <b>$1.800.000</b></p>
+        <a id="clearToast" onclick="toggleToast()"><i class="cross-icon fa-solid fa-xmark"></i></a>
+    </div>
 
     <footer>
         <div class="pagination" id="paginacion"></div>

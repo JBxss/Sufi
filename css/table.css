@@ -213,6 +213,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background-color: var(--red_1_-dd3542);
   top: 192px;
   left: 28px;
+  transition: all 0.3s ease;
 }
 
 .select-icon {
@@ -224,9 +225,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .lbl {
-  font: var(--unnamed-font-style-normal) normal
-    var(--unnamed-font-weight-normal) var(--unnamed-font-size-16) /
-    var(--unnamed-line-spacing-22) var(--unnamed-font-family-open-sans);
+  font-size: 13.5px;
   letter-spacing: var(--unnamed-character-spacing-0);
   color: var(--azul-plomo);
   position: absolute;
@@ -397,4 +396,33 @@ footer .inputPagina {
 .arrow-pag {
   font-size: 16px;
   margin-top: 16px;
+}
+
+.table-toast {
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-normal) var(--unnamed-font-size-14) /
+    var(--unnamed-line-spacing-22) var(--unnamed-font-family-open-sans);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(---413e4d-input-color);
+  text-align: left;
+  background: var(--white_-ffffff) 0% 0% no-repeat padding-box;
+  width: 200px;
+  height: 70px;
+  padding: 20px;
+  z-index: 2;
+  position: fixed;
+  left: 1090px;
+  transform: translateX(-50%);
+  top: 668px;
+  box-shadow: 0px 3px 10px #e6e6e6;
+  border-radius: 14px;
+}
+
+.table-toast p {
+  margin: 0px;
+}
+
+.table-toast .cross-icon {
+  top: -10px;
+  left: 225px;
 }
