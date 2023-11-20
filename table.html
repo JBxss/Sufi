@@ -40,10 +40,9 @@
             <select class="filter filter-select" id="filtroTipo" name="filtroEdad"
                 onchange="toggleButton(); aplicarFiltroPorFecha(event);">
                 <option hidden selected value=""></option>
-                <option value="">Todos</option>
-                <option value="25">Cédula</option>
-                <option value="25">Licencia</option>
-                <option value="25">Pasaporte</option>
+                <option value="Cédula">Cédula</option>
+                <option value="Licencia">Licencia</option>
+                <option value="Pasaporte">Pasaporte</option>
             </select>
             <label id="lbl-select" class="lbl lbl-select">Tipo doc.</label>
 
@@ -86,7 +85,7 @@
         <select id="registrosPorPagina" name="registrosPorPagina" onchange="cambiarRegistrosPorPagina()">
             <option value="3">3</option>
             <option value="5">5</option>
-            <option value="10">10</option>
+            <option selected value="10">10</option>
         </select>
     </footer>
 
