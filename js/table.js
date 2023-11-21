@@ -147,6 +147,24 @@ var datos = [
   {fecha: "11-04-2023 12:15:30", numeroDesembolso: 98765432, TipoDocumento: "Cédula", NumeroDocumento: 1938477422, Monto: "$217.283.738",},
   {fecha: "11-04-2023 12:15:30", numeroDesembolso: 98765432, TipoDocumento: "Cédula", NumeroDocumento: 1938477422, Monto: "$217.283.738",},
   {fecha: "11-04-2023 12:15:30", numeroDesembolso: 98765432, TipoDocumento: "Cédula", NumeroDocumento: 1935555555, Monto: "$217.283.738",},
+  {fecha: "11-01-2023 02:43:24", numeroDesembolso: 19384774, TipoDocumento: "Cédula", NumeroDocumento: 1938477488, Monto: "$237.283.738",},
+  {fecha: "11-01-2023 02:43:24", numeroDesembolso: 19384774, TipoDocumento: "Cédula", NumeroDocumento: 1938477499, Monto: "$557.283.738",},
+  {fecha: "11-02-2023 05:12:10", numeroDesembolso: 84736281, TipoDocumento: "Pasaporte", NumeroDocumento: 1938477400, Monto: "$777.283.738",},
+  {fecha: "11-03-2023 08:30:45", numeroDesembolso: 56782309, TipoDocumento: "Licencia", NumeroDocumento: 1938477466, Monto: "$337.283.738",},
+  {fecha: "11-04-2023 12:15:30", numeroDesembolso: 98765432, TipoDocumento: "Cédula", NumeroDocumento: 1938477422, Monto: "$217.283.738",},
+  {fecha: "11-05-2023 14:22:18", numeroDesembolso: 34567890, TipoDocumento: "Pasaporte", NumeroDocumento: 1938477411, Monto: "$137.283.738",},
+  {fecha: "11-06-2023 18:11:05", numeroDesembolso: 23456789, TipoDocumento: "Licencia", NumeroDocumento: 2345678944, Monto: "$937.283.738",},
+  {fecha: "11-07-2023 20:45:55", numeroDesembolso: 12345678, TipoDocumento: "Cédula", NumeroDocumento: 2345678999, Monto: "$637.283.738",},
+  {fecha: "11-08-2023 23:08:42", numeroDesembolso: 87654321, TipoDocumento: "Pasaporte", NumeroDocumento: 2345678955, Monto: "$837.283.738",},
+  {fecha: "11-09-2023 01:59:30", numeroDesembolso: 78901234, TipoDocumento: "Licencia", NumeroDocumento: 2345678966, Monto: "$997.283.738",},
+  {fecha: "11-10-2023 04:37:15", numeroDesembolso: 65432109, TipoDocumento: "Cédula", NumeroDocumento: 2345678923, Monto: "$754.283.738",},
+  {fecha: "11-01-2023 02:43:24", numeroDesembolso: 19384774, TipoDocumento: "Cédula", NumeroDocumento: 1938477488, Monto: "$237.283.738",},
+  {fecha: "11-01-2023 02:43:24", numeroDesembolso: 19384774, TipoDocumento: "Cédula", NumeroDocumento: 1938477499, Monto: "$557.283.738",},
+  {fecha: "11-02-2023 05:12:10", numeroDesembolso: 84736281, TipoDocumento: "Pasaporte", NumeroDocumento: 1938477400, Monto: "$777.283.738",},
+  {fecha: "11-03-2023 08:30:45", numeroDesembolso: 56782309, TipoDocumento: "Licencia", NumeroDocumento: 1938477466, Monto: "$337.283.738",},
+  {fecha: "11-04-2023 12:15:30", numeroDesembolso: 98765432, TipoDocumento: "Cédula", NumeroDocumento: 1938477422, Monto: "$217.283.738",},
+  {fecha: "11-04-2023 12:15:30", numeroDesembolso: 98765432, TipoDocumento: "Cédula", NumeroDocumento: 1938477422, Monto: "$217.283.738",},
+  {fecha: "11-04-2023 12:15:30", numeroDesembolso: 98765432, TipoDocumento: "Cédula", NumeroDocumento: 1935555555, Monto: "$217.283.738",},
 ];
 
 var registrosPorPagina = 16;
@@ -192,6 +210,7 @@ function actualizarPaginacion(pagina) {
   var totalPaginas = Math.ceil(datos.length / registrosPorPagina);
   var paginacion = document.getElementById("paginacion");
   var totalPaginasElement = document.getElementById("totalPaginas");
+  var inputPagina = document.getElementById("inputPagina");
 
   totalPaginasElement.textContent = " de " + totalPaginas + "  ";
 
@@ -200,11 +219,12 @@ function actualizarPaginacion(pagina) {
   // Botón Anterior
   var btnAnterior = document.createElement("a");
   btnAnterior.href = "javascript:void(0);";
-  btnAnterior.innerHTML = "<i class='arrow-pag fa-solid fa-chevron-left'></i>";
+  btnAnterior.innerHTML = "<i class='arrow-pag left fa-solid fa-chevron-left'></i>";
   btnAnterior.addEventListener("click", function () {
     if (pagina > 1) {
       paginaActual = pagina - 1;
       mostrarTabla(paginaActual);
+      inputPagina.value = paginaActual;
     }
   });
   paginacion.appendChild(btnAnterior);
@@ -213,11 +233,12 @@ function actualizarPaginacion(pagina) {
   var btnSiguiente = document.createElement("a");
   btnSiguiente.href = "javascript:void(0);";
   btnSiguiente.innerHTML =
-    "<i class='arrow-pag fa-solid fa-chevron-right'></i>";
+    "<i class='arrow-pag right fa-solid fa-chevron-right'></i>";
   btnSiguiente.addEventListener("click", function () {
     if (pagina < totalPaginas) {
       paginaActual = pagina + 1;
       mostrarTabla(paginaActual);
+      inputPagina.value = paginaActual;
     }
   });
   totalPaginasElement.appendChild(btnSiguiente);
@@ -227,6 +248,7 @@ var datosOriginales = datos.slice(); // Copia de seguridad de los datos original
 var registrosPorPaginaSelect = document.getElementById("registrosPorPagina");
 
 function cambiarRegistrosPorPagina() {
+  document.getElementById("inputPagina").value = 1;
   registrosPorPagina = parseInt(registrosPorPaginaSelect.value);
   mostrarTabla(1);
 }

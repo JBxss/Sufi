@@ -31,17 +31,6 @@
   --unnamed-line-spacing-27: 27px;
 }
 
-/* Character Styles */
-.unnamed-character-style-1 {
-  font-family: var(--unnamed-font-family-open-sans);
-  font-style: var(--unnamed-font-style-normal);
-  font-weight: var(--unnamed-font-weight-normal);
-  font-size: var(--unnamed-font-size-14);
-  line-height: var(--unnamed-line-spacing-19);
-  letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(---413e4d-input-color);
-}
-
 body {
   height: 100%;
   margin: 0;
@@ -59,10 +48,6 @@ nav {
   align-items: center;
   height: 72px;
   z-index: 2;
-  position: relative;
-}
-
-main {
   position: sticky;
   top: 0;
 }
@@ -115,6 +100,8 @@ header {
   position: relative;
   z-index: 1;
   background-color: var(--white_-ffffff);
+  position: sticky;
+  top: 72px;
 }
 
 .table-title {
@@ -146,6 +133,8 @@ header {
   background: #fafafa 0% 0% no-repeat padding-box;
   opacity: 1;
   padding: 0px 72px;
+  position: sticky;
+  top: 160px;
 }
 
 form {
@@ -206,13 +195,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .calendar-icon-left {
-  top: 24.52vh;
-  left: 73vw;
+  top: 2.125rem;
+  left: 73%;
 }
 
 .calendar-icon-right {
-  top: 24.52vh;
-  left: 91.31vw;
+  top: 2.125rem;
+  left: 92%;
 }
 
 .cross-icon {
@@ -222,7 +211,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   padding: 6px 7.5px;
   border-radius: 50%;
   background-color: var(--red_1_-dd3542);
-  top: 24.52vh;
+  top: 2.125rem;
   left: 1.94vw;
   transition: all 0.3s ease;
 }
@@ -233,6 +222,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   left: 17.83vw;
   color: var(--red_1_-dd3542);
   font-size: 24px;
+  top: 2.125rem;
 }
 
 .lbl {
@@ -245,28 +235,28 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .lbl-number {
-  top: 24.77vh;
-  left: 41.8vw;
+  top: 2.125rem;
+  left: 41.5%;
 }
 
 .lbl-doc {
-  top: 24.77vh;
-  left: 23.6vw;
+  top: 2.125rem;
+  left: 23%;
 }
 
 .lbl-date-left {
-  top: 24.77vh;
-  left: 60.2vw;
+  top: 2.125rem;
+  left: 60%;
 }
 
 .lbl-date-right {
-  top: 24.77vh;
-  left: 78.55vw;
+  top: 2.125rem;
+  left: 78.5%;
 }
 
 .lbl-select {
-  top: 24.77vh;
-  left: 7vw;
+  top: 2.125rem;
+  left: 5.5rem;
 }
 
 .lbl-focus {
@@ -331,7 +321,7 @@ th:nth-child(1) {
   padding-left: 72px;
 }
 
-footer {
+.table-pagination {
   background: var(--white_-ffffff) 0% 0% no-repeat padding-box;
   width: max-content;
   display: flex;
@@ -341,26 +331,27 @@ footer {
   left: 50%;
   transform: translateX(-50%);
   bottom: 0.01rem;
-  gap: 1rem;
+  gap: .95rem;
   box-shadow: 0px 3px 16px #aaaaaa4d;
   border-radius: 24px 24px 0px 0px;
 }
 
-footer a {
+.table-pagination a {
   text-decoration: none;
   color: var(--red_1_-dd3542);
   font-size: 24px;
   margin: 0px 16px;
 }
+
 .pagination span {
   font: var(--unnamed-font-style-normal) normal
     var(--unnamed-font-weight-normal) var(--unnamed-font-size-16) / 20px
     var(--unnamed-font-family-lato);
   letter-spacing: var(--unnamed-character-spacing-0);
   color: #414141;
-  vertical-align: middle;
 }
-footer .inputPagina {
+
+.table-pagination .inputPagina {
   width: 48px;
   height: 48px;
   background: var(--white_-ffffff) 0% 0% no-repeat padding-box;
@@ -368,6 +359,7 @@ footer .inputPagina {
   border-radius: 6px;
   text-align: center;
   justify-content: center;
+  padding: 2px;
   font: var(--unnamed-font-style-normal) normal
     var(--unnamed-font-weight-normal) var(--unnamed-font-size-16) / 20px
     var(--unnamed-font-family-lato);
@@ -411,9 +403,9 @@ footer .inputPagina {
 }
 
 .arrow-pag {
-  font-size: 16px;
-  margin-top: 16px;
+  font-size: 14px;
 }
+
 
 .table-toast {
   font: var(--unnamed-font-style-normal) normal
@@ -428,9 +420,9 @@ footer .inputPagina {
   padding: 20px;
   z-index: 2;
   position: fixed;
-  left: 84.5vw;
+  right: .1rem;
   transform: translateX(-50%);
-  top: 81.3vh;
+  bottom: 2.6rem;
   box-shadow: 0px 3px 10px #e6e6e6;
   border-radius: 14px;
 }

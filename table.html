@@ -25,8 +25,8 @@
         <header>
             <h2 class="table-title">Mis desembolsos</h2>
             <div class="header-btn-container">
-                <a class="btn download-btn" href="" id="guardarDatos"><img class="download-icon" src="./assets/table/download.svg"
-                        alt="">Descargar</a>
+                <a class="btn download-btn" href="" id="guardarDatos"><img class="download-icon"
+                        src="./assets/table/download.svg" alt="">Descargar</a>
             </div>
         </header>
 
@@ -64,29 +64,25 @@
                 <label id="lbl-date-right" class="lbl lbl-date-right">Hasta</label>
             </form>
         </section>
+
+        <table id="tablaDesembolsos">
+            <tr>
+                <th>Fecha y hora</th>
+                <th>Número de desembolso</th>
+                <th>Tipo de documento</th>
+                <th>Número de documento</th>
+                <th>Monto</th>
+            </tr>
+        </table>
     </main>
 
-
-    <table id="tablaDesembolsos">
-        <tr>
-            <th>Fecha y hora</th>
-            <th>Número de desembolso</th>
-            <th>Tipo de documento</th>
-            <th>Número de documento</th>
-            <th>Monto</th>
-        </tr>
-    </table>
-
-    <div id="table-toast" class="table-toast">
-        <p>Pedro Pérez ha hecho <br> una compra por valor de <b>$1.800.000</b></p>
-        <a id="clearToast" onclick="toggleToast()"><i class="cross-icon fa-solid fa-xmark"></i></a>
-    </div>
-
-    <footer>
-        <div class="pagination" id="paginacion"></div>
-        <input class="inputPagina" type="number" id="inputPagina" min="1" value="1" onchange="cambiarPagina()">
-        <span id="totalPaginas"></span>
+    <section class="table-pagination">
+        <div class="bottom-pag pagination" id="paginacion"></div>
+        <input class="inputPagina" id="inputPagina" min="1" value="1" onchange="cambiarPagina()">
+        <div id="totalPaginas-container">
+            <span class="pagination-span" id="totalPaginas"></span>
         </div>
+        
 
         <label class="registrosPorPagina" for="registrosPorPagina">Registros por Página</label>
         <select class="inputRegistrosPorPagina" id="registrosPorPagina" name="registrosPorPagina"
@@ -96,7 +92,12 @@
             <option value="50">50</option>
         </select>
         <i class="select-icon-pagination fi fi-rr-angle-small-down"></i>
-    </footer>
+    </section>
+
+    <div id="table-toast" class="table-toast">
+        <p>Pedro Pérez ha hecho <br> una compra por valor de <b>$1.800.000</b></p>
+        <a id="clearToast" onclick="toggleToast()"><i class="cross-icon fa-solid fa-xmark"></i></a>
+    </div>
 
     <script src="./js/table.js"></script>
     <script src="https://kit.fontawesome.com/68c7342c84.js" crossorigin="anonymous"></script>
