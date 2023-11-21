@@ -46,6 +46,7 @@ body {
   overflow: hidden;
 }
 
+/* ====== Estilos del contenido principal ====== */
 .wrapper {
   width: 476px;
   height: 476px;
@@ -75,6 +76,7 @@ body {
   letter-spacing: 0px;
 }
 
+/* ====== Estilos del Formulario ====== */
 .input-container {
   background: #ffffff;
   margin: 32px 0;
@@ -101,7 +103,7 @@ body {
   margin: 0px 0px 12px 0px;
 }
 
-.wrapper .input-btn {
+.input-btn {
   width: 174px;
   height: 48px;
   background: var(--red_1_-dd3542) 0% 0% no-repeat padding-box;
@@ -117,7 +119,31 @@ body {
   margin: 0px 0px 24px 0px;
 }
 
-.wrapper .login-forgot-btn {
+.lbl-nombre,
+.lbl-pass {
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-normal) var(--unnamed-font-size-16) /
+    var(--unnamed-line-spacing-22) var(--unnamed-font-family-open-sans);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--azul-plomo);
+  position: absolute;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.lbl-focus {
+  transform: translateY(-60%);
+  font: var(--unnamed-font-style-normal) normal
+    var(--unnamed-font-weight-normal) 12px / var(--unnamed-line-spacing-22)
+    var(--unnamed-font-family-open-sans);
+  letter-spacing: var(--unnamed-character-spacing-0);
+}
+
+.input-box input:focus {
+  outline: 0;
+}
+
+.login-forgot-btn {
   font: var(--unnamed-font-style-normal) normal
     var(--unnamed-font-weight-normal) 12px/17px
     var(--unnamed-font-family-open-sans);
@@ -128,6 +154,8 @@ body {
   cursor: pointer;
 }
 
+
+/* ====== Estilos de las imagenes en el fondo ====== */
 .images {
   display: flex;
   position: fixed;
@@ -177,33 +205,4 @@ body {
 .input-box .lbl-pass {
   top: 6.25rem;
   left: 2rem;
-}
-
-.lbl-nombre,
-.lbl-pass {
-  font: var(--unnamed-font-style-normal) normal
-    var(--unnamed-font-weight-normal) var(--unnamed-font-size-16) /
-    var(--unnamed-line-spacing-22) var(--unnamed-font-family-open-sans);
-  letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(--azul-plomo);
-  position: absolute;
-  transition: all 0.3s ease;
-  pointer-events: none;
-}
-
-.lbl-focus {
-  transform: translateY(-60%);
-  font: var(--unnamed-font-style-normal) normal
-    var(--unnamed-font-weight-normal) 12px / var(--unnamed-line-spacing-22)
-    var(--unnamed-font-family-open-sans);
-  letter-spacing: var(--unnamed-character-spacing-0);
-}
-
-.input-box input:focus {
-  outline: 0;
-}
-
-.error {
-  border: 1px solid red;
-  color: red;
 }

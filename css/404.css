@@ -4,6 +4,8 @@ html,
 body {
   height: 100%;
 }
+
+/* Configuración para el cuerpo de la página */
 body {
   display: flex;
   align-items: center;
@@ -15,20 +17,24 @@ body {
 svg {
   width: 100%;
 }
+
+/* Estilos específicos para el número "404" */
 .number-404 {
   font-size: 7.5em;
   margin: 15px 0px;
   font-weight: bold;
   color: #dd3542;
 }
+
 h2 {
   font-weight: bold;
 }
 
-p {
-    margin-bottom: 10px;
+.message-404 {
+    margin-bottom: 35px;
 }
 
+/* Estilos para el botón de regreso */
 .back-btn {
   width: 174px;
   height: 48px;

@@ -1,4 +1,5 @@
 window.addEventListener("load", function () {
+  // Manejador de eventos para el evento "blur" en el input de usuario
   document
     .getElementById("input-username")
     .addEventListener("blur", function () {
@@ -10,12 +11,14 @@ window.addEventListener("load", function () {
       }
     });
 
+  // Manejador de eventos para el evento "focus" en el input de usuario
   document
     .getElementById("input-username")
     .addEventListener("focus", function () {
       document.getElementById("lbl-nombre").classList.add("lbl-focus");
     });
 
+  // Manejador de eventos para el evento "blur" en el input de contraseña
   document.getElementById("password").addEventListener("blur", function () {
     var inputElement = document.getElementById("password");
     var labelElement = document.getElementById("lbl-pass");
@@ -25,17 +28,19 @@ window.addEventListener("load", function () {
     }
   });
 
+  // Manejador de eventos para el evento "focus" en el input de contraseña
   document.getElementById("password").addEventListener("focus", function () {
     document.getElementById("lbl-pass").classList.add("lbl-focus");
   });
 });
 
+// Función para validar el formulario al enviar
 function validateForm() {
   var usuario = document.getElementById("input-username").value;
   var contrasena = document.getElementById("password").value;
 
   // Validación para el Usuario
-  if (usuario.length < 6 || usuario.length > 20) {
+  if (usuario.length < 4 || usuario.length > 20) {
     alert("El nombre de usuario debe tener entre 6 y 20 caracteres.");
     return false;
   }
@@ -58,6 +63,7 @@ function validateForm() {
   var regexMinuscula = /[a-z]/;
   var regexNumero = /[0-9]/;
 
+  // Verifica que la contraseña cumpla con los requisitos
   if (
     !regexMayuscula.test(contrasena) ||
     !regexMinuscula.test(contrasena) ||

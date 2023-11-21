@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sufi</title>
+
+    <!-- Enlaces a los estilos -->
     <link rel="shortcut icon" href="./assets/login/Grupo 258.svg" type="image/x-icon">
     <link rel="stylesheet" href="./css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -14,52 +16,58 @@
 
     <main class="wrapper">
 
+        <!-- Contenedor de Titulos -->
         <div class="animate__animated animate__fadeInDown animate__fast">
             <img class="login-logo" src="./assets/login/Grupo 258.svg" alt="Logo de Sufi">
             <h1>Sufipay</h1>
             <h3>Administrador comercial</h3>
         </div>
 
+        <!-- Formulario de login -->
         <form id="form" class="animate__animated animate__fadeInUp animate__fast" onsubmit="return validateForm()"
             action="./table.html">
-
             <div class="input-container">
+
+                <!-- Input de usuario -->
                 <div class="input-box">
                     <input id="input-username" name="username" class="input-user" type="text">
-                    <label id="lbl-nombre" for="username" class="lbl-nombre">Usuario</label>
+                    <label id="lbl-nombre" for="input-username" class="lbl-nombre">Usuario</label>
                 </div>
 
+                <!-- Input de Contraseña -->
                 <div class="input-box">
                     <input id="password" name="password" type="password">
                     <label id="lbl-pass" for="password" class="lbl-pass">Contraseña</label>
                 </div>
             </div>
 
+            <!-- Botón de ingreso -->
             <input class="input-btn" type="submit" value="INGRESAR">
 
+            <!-- Enlace para recuperar contraseña -->
             <div>
                 <a class="login-forgot-btn" href="./404.html">No recuerdo mi contraseña</a>
             </div>
         </form>
-
-        <div class="images-container">
-            <img class="images login-bg-right animate__animated animate__fadeInRight animate__faster animate__delay-1s"
-                src="./assets/login/Grupo 32966.svg" alt="Imagen de fondo">
-            <img class="images login-bg-left animate__animated animate__fadeInLeft animate__faster animate__delay-1s"
-                src="./assets/login/Grupo 32967.svg" alt="Imagen de fondo">
-            <img class="images login-dots-right animate__animated animate__fadeInLeft animate__faster animate__delay-1s"
-                src="./assets/login/Grupo 36075.svg" alt="Imagen de fondo">
-            <img class="images login-dots-left animate__animated animate__fadeInRight animate__faster animate__delay-1s"
-                src="./assets/login/Grupo 36052.svg" alt="Imagen de fondo">
-            <img class="images login-dot-left animate__animated animate__fadeInRight animate__faster animate__delay-1s"
-                src="./assets/login/Elipse 197.svg" alt="Imagen de fondo">
-            <img class="images login-dot-right animate__animated animate__fadeInLeft animate__faster animate__delay-1s"
-                src="./assets/login/Elipse 216.svg" alt="Imagen de fondo">
-        </div>
-
     </main>
 
+    <!-- Contenedor de imágenes con fondos y elementos decorativos -->
+    <div class="images-container">
+        <img class="images login-bg-right animate__animated animate__fadeInRight animate__faster animate__delay-1s"
+            src="./assets/login/Grupo 32966.svg" alt="Imagen de fondo">
+        <img class="images login-bg-left animate__animated animate__fadeInLeft animate__faster animate__delay-1s"
+            src="./assets/login/Grupo 32967.svg" alt="Imagen de fondo">
+        <img class="images login-dots-right animate__animated animate__fadeInLeft animate__faster animate__delay-1s"
+            src="./assets/login/Grupo 36075.svg" alt="Imagen de fondo">
+        <img class="images login-dots-left animate__animated animate__fadeInRight animate__faster animate__delay-1s"
+            src="./assets/login/Grupo 36052.svg" alt="Imagen de fondo">
+        <img class="images login-dot-left animate__animated animate__fadeInRight animate__faster animate__delay-1s"
+            src="./assets/login/Elipse 197.svg" alt="Imagen de fondo">
+        <img class="images login-dot-right animate__animated animate__fadeInLeft animate__faster animate__delay-1s"
+            src="./assets/login/Elipse 216.svg" alt="Imagen de fondo">
+    </div>
+
+    <!-- Enlace al script de JavaScript -->
     <script src="./js/login.js"></script>
 </body>
-
 </html>
