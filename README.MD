@@ -1,7 +1,6 @@
 **SUFI: Administrador Comercial**
 
 ![Logo de Sufi](./assets/table/Grupo%20175.svg)
-*Logo de Sufi*
 
 ### Descripción
 SUFI es un sistema de administración comercial que proporciona funcionalidades para gestionar datos y realizar operaciones relacionadas con desembolsos. El sistema incluye un módulo de autenticación, una página de tabla con filtros funcionales y paginación, así como una página de error 404 para manejar rutas no encontradas.
@@ -11,10 +10,10 @@ SUFI es un sistema de administración comercial que proporciona funcionalidades 
 ![Login de Sufi](./assets/screenshots/screen1.png)
 *Pagina de Login de Sufi*
 
-![Tabla de Sufi](./assets/screenshots/screen1.png)
+![Tabla de Sufi](./assets/screenshots/screen2.png)
 *Pagina de Desembolsos de Sufi*
 
-![Pagina Error404](./assets/screenshots/screen1.png)
+![Pagina Error404](./assets/screenshots/screen3.png)
 *Vista de Error404*
 
 ### Características Principales
