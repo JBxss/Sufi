@@ -125,6 +125,7 @@ body {
   color: var(---413e4d-input-color);
   text-align: center;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .images {

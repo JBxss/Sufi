@@ -16,8 +16,8 @@
   ---413e4d-input-color: #413e4d;
 
   /* Font/text values */
-  --unnamed-font-family-open-sans: Open Sans;
-  --unnamed-font-family-lato: Lato;
+  --unnamed-font-family-open-sans: "Open Sans";
+  --unnamed-font-family-lato: "Lato";
   --unnamed-font-style-normal: normal;
   --unnamed-font-weight-900: 900px;
   --unnamed-font-weight-bold: bold;
