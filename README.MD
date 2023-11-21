@@ -41,7 +41,7 @@ SUFI es un sistema de administración comercial que proporciona funcionalidades 
 ### Cómo Usar
 1. Abre el archivo `index.html` en un navegador web para acceder a la página de inicio de sesión.
 2. Ingresa las credenciales de usuario para acceder al sistema. _// Usuario: Cualquiera con mas de 4 Caracteres | Contraseña: Cualquiera con mas de 8 caracteres como minimo minuscula, mayuscula y numero_
-3. Navega a la página de tabla para visualizar y filtrar datos.
+3. Navega a la página de tabla para visualizar y filtrar datos. _// La filtracion por fecha no funciona bien_
 4. Utiliza la paginación para explorar conjuntos extensos de datos.
 5. Exporta datos a un archivo CSV haciendo clic en el botón correspondiente.
 6. En caso de rutas no encontradas, serás redirigido a la página de error 404.
