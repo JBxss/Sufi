@@ -165,6 +165,7 @@ form {
     var(--unnamed-line-spacing-22) var(--unnamed-font-family-open-sans);
   letter-spacing: var(--unnamed-character-spacing-0);
   color: var(---413e4d-input-color);
+  appearance: none;
 }
 
 .filter::placeholder {
