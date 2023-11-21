@@ -46,6 +46,10 @@ body {
   overflow: hidden;
 }
 
+main {
+  z-index: 2;
+}
+
 /* ====== Estilos del contenido principal ====== */
 .wrapper {
   width: 476px;

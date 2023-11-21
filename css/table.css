@@ -146,7 +146,7 @@ form {
 }
 
 .filter {
-  width: 272px;
+  width: 17%;
   background: var(--white_-ffffff) 0% 0% no-repeat padding-box;
   border: 1px solid var(--azul-plomo-50-);
   border-radius: 6px;
@@ -221,7 +221,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .select-icon {
   position: absolute;
-  top: 24.52vh;
   left: 17.83vw;
   color: var(--red_1_-dd3542);
   font-size: 24px;
@@ -274,6 +273,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 /* ====== Estilos de la Tabla de Desembolsos ====== */
+.table-container{
+  overflow-x: auto;
+}
 table {
   width: 100%;
   border-collapse: collapse;
@@ -440,4 +442,73 @@ th:nth-child(1) {
 .table-toast .cross-icon {
   top: -10px;
   left: 225px;
+}
+
+/* Media query para dispositivos con un ancho de pantalla min de 1800px */
+@media  screen and (min-width: 1800px) {
+  .lbl-number {
+    left: 42%;
+  }
+  
+  .lbl-date-left {
+    top: 2.125rem;
+    left: 62%;
+  }
+  
+  .lbl-date-right {
+    left: 81.5%;
+  }
+
+  .calendar-icon-left {
+    left: 73%;
+  }
+  
+  .calendar-icon-right {
+    top: 2.125rem;
+    left: 92%;
+  }
+
+  .select-icon {
+    left: 15%;
+  }
+}
+
+/* Media query para dispositivos con un ancho de pantalla max de 1100px */
+@media  screen and (max-width: 1200px) {
+  .lbl-select {
+    font-size: .8rem;
+  }
+
+  .lbl-doc {
+    font-size: .75rem;
+  }
+
+  .lbl-number {
+    font-size: .7rem;
+    left: 42%;
+  }
+  
+  .lbl-date-left {
+    font-size: .8rem;
+    top: 2.125rem;
+    left: 60%;
+  }
+  
+  .lbl-date-right {
+    font-size: .8rem;
+    left: 78%;
+  }
+
+  .calendar-icon-left {
+    left: 71.5%;
+  }
+  
+  .calendar-icon-right {
+    top: 2.125rem;
+    left: 89.5%;
+  }
+
+  .select-icon {
+    left: 17.5%;
+  }
 }
