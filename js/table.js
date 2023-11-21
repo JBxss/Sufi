@@ -1,7 +1,10 @@
+// ================= ANIMACIONES DE INPUTS ===========================
 window.addEventListener("load", function () {
+  // Configuración inicial al cargar la página: cambia el tipo de entrada de las fechas a texto
   document.getElementById("filtroFechaHasta").type = "text";
   document.getElementById("filtroFechaDesde").type = "text";
 
+  // Configuración de eventos para el filtro de fecha "Hasta"
   document
     .getElementById("filtroFechaHasta")
     .addEventListener("blur", function () {
@@ -21,6 +24,7 @@ window.addEventListener("load", function () {
       document.getElementById("lbl-date-right").classList.add("lbl-focus");
     });
 
+  // Configuración de eventos para el filtro de fecha "Hasta"
   document
     .getElementById("filtroFechaDesde")
     .addEventListener("blur", function () {
@@ -40,6 +44,7 @@ window.addEventListener("load", function () {
       document.getElementById("lbl-date-left").classList.add("lbl-focus");
     });
 
+  // Configuración de eventos para el filtro de número de desembolso
   document.getElementById("filtroNumber").addEventListener("blur", function () {
     var inputElement = document.getElementById("filtroNumber");
     var labelElement = document.getElementById("lbl-number");
@@ -55,6 +60,7 @@ window.addEventListener("load", function () {
       document.getElementById("lbl-number").classList.add("lbl-focus");
     });
 
+  // Configuración de eventos para el filtro de número de documento
   document.getElementById("filtroDoc").addEventListener("blur", function () {
     var inputElement = document.getElementById("filtroDoc");
     var labelElement = document.getElementById("lbl-doc");
@@ -68,6 +74,7 @@ window.addEventListener("load", function () {
     document.getElementById("lbl-doc").classList.add("lbl-focus");
   });
 
+  // Configuración de eventos para el filtro de tipo de documento
   document.getElementById("filtroTipo").addEventListener("blur", function () {
     var inputElement = document.getElementById("filtroTipo");
     var labelElement = document.getElementById("lbl-select");
@@ -82,6 +89,8 @@ window.addEventListener("load", function () {
   });
 });
 
+// ================= FUNCIONES DE FILTROS ===========================
+// Función para mostrar u ocultar el botón de limpiar según los campos de filtro ingresados
 function toggleButton() {
   var inputType = document.getElementById("filtroTipo").value;
   var inputDoc = document.getElementById("filtroDoc").value;
@@ -104,13 +113,7 @@ function toggleButton() {
   }
 }
 
-function toggleToast() {
-  var button = document.getElementById("clearToast");
-  var toast = document.getElementById("table-toast");
-  button.style.display = "none";
-  toast.style.display = "none";
-}
-
+// Función para limpiar el formulario de filtros
 function clearForm() {
   document.getElementById("clearButton").style.display = "none";
   document.getElementById("filtroTipo").value = "";
@@ -127,7 +130,8 @@ function clearForm() {
 
   aplicarFiltroPorFecha(event);
 }
-
+// ================= FUNCIONES DE TABLA ===========================
+// Datos de ejemplo para la tabla "INTENTE USAR UN ARCHIVO .JSON PERO DEJABA DE FUNCIONAR LA TABLA Y LOS FILTROS"
 var datos = [
   {fecha: "11-01-2023 02:43:24", numeroDesembolso: 19384774, TipoDocumento: "Cédula", NumeroDocumento: 1938477488, Monto: "$237.283.738",},
   {fecha: "11-01-2023 02:43:24", numeroDesembolso: 19384774, TipoDocumento: "Cédula", NumeroDocumento: 1938477499, Monto: "$557.283.738",},
@@ -170,9 +174,11 @@ var datos = [
 var registrosPorPagina = 16;
 var paginaActual = 1;
 
+// Función para mostrar las filas de la tabla según la página actual
 function mostrarTabla(pagina) {
   var tabla = document.getElementById("tablaDesembolsos");
 
+  // Calcular el rango de filas a mostrar
   var inicio = (pagina - 1) * registrosPorPagina;
   var fin = inicio + registrosPorPagina;
 
@@ -206,12 +212,14 @@ function mostrarTabla(pagina) {
   actualizarPaginacion(pagina);
 }
 
+// Función para actualizar la paginación
 function actualizarPaginacion(pagina) {
   var totalPaginas = Math.ceil(datos.length / registrosPorPagina);
   var paginacion = document.getElementById("paginacion");
   var totalPaginasElement = document.getElementById("totalPaginas");
   var inputPagina = document.getElementById("inputPagina");
 
+  // Actualizar el elemento de total de páginas
   totalPaginasElement.textContent = " de " + totalPaginas + "  ";
 
   paginacion.innerHTML = "";
@@ -219,7 +227,8 @@ function actualizarPaginacion(pagina) {
   // Botón Anterior
   var btnAnterior = document.createElement("a");
   btnAnterior.href = "javascript:void(0);";
-  btnAnterior.innerHTML = "<i class='arrow-pag left fa-solid fa-chevron-left'></i>";
+  btnAnterior.innerHTML =
+    "<i class='arrow-pag left fa-solid fa-chevron-left'></i>";
   btnAnterior.addEventListener("click", function () {
     if (pagina > 1) {
       paginaActual = pagina - 1;
@@ -247,12 +256,14 @@ function actualizarPaginacion(pagina) {
 var datosOriginales = datos.slice(); // Copia de seguridad de los datos originales
 var registrosPorPaginaSelect = document.getElementById("registrosPorPagina");
 
+// Función para cambiar la cantidad de registros por página
 function cambiarRegistrosPorPagina() {
   document.getElementById("inputPagina").value = 1;
   registrosPorPagina = parseInt(registrosPorPaginaSelect.value);
   mostrarTabla(1);
 }
 
+// Función para aplicar filtros de fecha y actualizar la tabla
 function aplicarFiltroPorFecha(event) {
   event.preventDefault(); // Evitar la recarga automática del formulario
 
@@ -312,6 +323,7 @@ function aplicarFiltroPorFecha(event) {
   mostrarTabla(1);
 }
 
+// Función para cambiar la página actual al valor ingresado en el campo de página
 function cambiarPagina() {
   var inputPagina = document.getElementById("inputPagina");
   var nuevaPagina = parseInt(inputPagina.value);
@@ -327,7 +339,8 @@ function cambiarPagina() {
     inputPagina.value = paginaActual;
   }
 }
-
+// ================= FUNCION DE DESCARGAR ===========================
+// Evento al hacer clic en el botón "Guardar Datos" para exportar los datos de la tabla a un archivo CSV
 document
   .getElementById("guardarDatos")
   .addEventListener("click", function (event) {
@@ -382,5 +395,14 @@ document
     // Limpia el enlace del DOM
     document.body.removeChild(enlace);
   });
+
+// ================= FUNCIONES DEL TOAST ===========================
+// Función para ocultar el toast (mensaje emergente)
+function toggleToast() {
+  var button = document.getElementById("clearToast");
+  var toast = document.getElementById("table-toast");
+  button.style.display = "none";
+  toast.style.display = "none";
+}
 
 mostrarTabla(paginaActual);

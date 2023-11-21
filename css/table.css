@@ -39,6 +39,7 @@ body {
   overflow: scroll;
 }
 
+/* ====== Estilos del NAVBAR ====== */
 nav {
   background: var(--white_-ffffff) 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 16px #d1e8ff74;
@@ -86,12 +87,7 @@ nav {
   margin-left: 12px;
 }
 
-.download-icon {
-  width: 24px;
-  height: 24px;
-  margin-right: 25px;
-}
-
+/* ====== Estilos del header ====== */
 header {
   display: flex;
   justify-content: space-between;
@@ -124,10 +120,17 @@ header {
   padding: 14px 50px 14px 14px;
 }
 
+.download-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 25px;
+}
+
 .header-btn-container {
   margin-top: 32px;
 }
 
+/* ====== Estilos de la Seccion de Filtros ====== */
 .filters {
   height: 88px;
   background: #fafafa 0% 0% no-repeat padding-box;
@@ -270,6 +273,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
 }
 
+/* ====== Estilos de la Tabla de Desembolsos ====== */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -305,7 +309,7 @@ td {
 }
 
 tr:nth-child(odd) {
-  background-color: #f7f7f7; /* Puedes cambiar el color según tus preferencias */
+  background-color: #f7f7f7;
 }
 
 td:nth-child(5) {
@@ -321,6 +325,7 @@ th:nth-child(1) {
   padding-left: 72px;
 }
 
+/* ====== Estilos de la Seccion de Paginacion ====== */
 .table-pagination {
   background: var(--white_-ffffff) 0% 0% no-repeat padding-box;
   width: max-content;
@@ -407,6 +412,7 @@ th:nth-child(1) {
 }
 
 
+/* ====== Estilos del Toast ====== */
 .table-toast {
   font: var(--unnamed-font-style-normal) normal
     var(--unnamed-font-weight-normal) var(--unnamed-font-size-14) /

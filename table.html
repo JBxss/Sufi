@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sufi</title>
+
+    <!-- Enlaces de Estilos -->
     <link rel="shortcut icon" href="./assets/table/Grupo 175.svg" type="image/x-icon">
     <link rel="stylesheet" href="./css/table.css">
     <link rel='stylesheet'
@@ -13,7 +15,11 @@
 </head>
 
 <body>
+
+    <!-- Contenido principal -->
     <main>
+
+        <!-- Barra de navegación -->
         <nav>
             <div class="logo">
                 <img src="./assets/table/Grupo 175.svg" alt="Logo">
@@ -22,6 +28,7 @@
                     class="logout-icon fi fi-rr-arrow-right-to-bracket"></i></a>
         </nav>
 
+        <!-- Encabezado de la página -->
         <header>
             <h2 class="table-title">Mis desembolsos</h2>
             <div class="header-btn-container">
@@ -30,14 +37,17 @@
             </div>
         </header>
 
-
+        <!-- Sección de filtros de la tabla -->
         <section class="filters">
             <form id="filtroForm">
+
+                <!-- Íconos y controles para el filtro por fecha -->
                 <img class="calendar-icon calendar-icon-left" src="./assets/table/calendar-days.svg" alt="">
                 <img class="calendar-icon calendar-icon-right" src="./assets/table/calendar-days.svg" alt="">
                 <a id="clearButton" onclick="clearForm()"><i class="cross-icon fa-solid fa-xmark"></i></a>
                 <i class="select-icon fi fi-rr-angle-small-down"></i>
 
+                <!-- Selector de tipo de documento -->
                 <select class="filter filter-select" id="filtroTipo" name="filtroEdad"
                     onchange="toggleButton(); aplicarFiltroPorFecha(event);">
                     <option hidden selected value=""></option>
@@ -47,14 +57,17 @@
                 </select>
                 <label id="lbl-select" class="lbl lbl-select">Tipo doc.</label>
 
+                <!-- Input para el número de documento -->
                 <input class="filter filter-doc" type="number" id="filtroDoc"
                     oninput="toggleButton(); aplicarFiltroPorFecha(event);">
                 <label id="lbl-doc" class="lbl lbl-doc">Número de documento</label>
 
+                <!-- Input para el número de desembolso -->
                 <input class="filter filter-number" type="number" id="filtroNumber" name="filtroNombre"
                     oninput="toggleButton(); aplicarFiltroPorFecha(event);">
                 <label id="lbl-number" class="lbl lbl-number">Número de desembolso</label>
 
+                <!-- Inputs para el rango de fechas -->
                 <input class="filter filter-date-left" type="date" id="filtroFechaDesde" name="filtroFechaDesde"
                     oninput="toggleButton(); aplicarFiltroPorFecha(event);">
                 <label id="lbl-date-left" class="lbl lbl-date-left">Desde</label>
@@ -65,6 +78,7 @@
             </form>
         </section>
 
+        <!-- Tabla de desembolsos -->
         <table id="tablaDesembolsos">
             <tr>
                 <th>Fecha y hora</th>
@@ -76,6 +90,7 @@
         </table>
     </main>
 
+    <!-- Sección de paginación de la tabla -->
     <section class="table-pagination">
         <div class="bottom-pag pagination" id="paginacion"></div>
         <input class="inputPagina" id="inputPagina" min="1" value="1" onchange="cambiarPagina()">
@@ -83,7 +98,7 @@
             <span class="pagination-span" id="totalPaginas"></span>
         </div>
         
-
+        <!-- Etiqueta y selector para la cantidad de registros por página -->
         <label class="registrosPorPagina" for="registrosPorPagina">Registros por Página</label>
         <select class="inputRegistrosPorPagina" id="registrosPorPagina" name="registrosPorPagina"
             onchange="cambiarRegistrosPorPagina()">
@@ -94,11 +109,13 @@
         <i class="select-icon-pagination fi fi-rr-angle-small-down"></i>
     </section>
 
+    <!-- Toast para mostrar mensajes -->
     <div id="table-toast" class="table-toast">
         <p>Pedro Pérez ha hecho <br> una compra por valor de <b>$1.800.000</b></p>
         <a id="clearToast" onclick="toggleToast()"><i class="cross-icon fa-solid fa-xmark"></i></a>
     </div>
 
+    <!-- Scripts -->
     <script src="./js/table.js"></script>
     <script src="https://kit.fontawesome.com/68c7342c84.js" crossorigin="anonymous"></script>
 </body>
